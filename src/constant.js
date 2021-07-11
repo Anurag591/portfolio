@@ -113,3 +113,7 @@ export const PROJECT_LIST = [
 
 
 export const pdfUrl = 'https://propcatalyst-dev.s3.ap-south-1.amazonaws.com/propcatalyst-assets/Abhinav%20Anand%20CV.pdf';
+
+export const API_DATA = {
+    contactUsApiURL: 'http://localhost:3000/contact'
+};

@@ -25,6 +25,7 @@ const Sidebar = props => {
         { title: 'Skills', className: 'fas fa-graduation-cap', link: '/skills'},
         { title: 'Projects', className: 'fas fa-project-diagram', link: '/projects'},
         { title: 'Resume', className: 'fas fa-file', link: 'resume' },
+        { title: 'Contact Me', className: 'fas fa-file', link: 'contact' },
     ];
 
     return (

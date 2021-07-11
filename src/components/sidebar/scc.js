@@ -7,6 +7,7 @@ export const SidebarContainer = styled.section`
     overflow: auto;
     color: white;
     padding: 2vh 30px 2vh 30px;
+    position: relative;
 
     @media (max-width: 720px) {
         position: absolute;
@@ -51,6 +52,7 @@ export const SocialLink = styled.a`
     border-radius: 50%;
     text-decoration: none;
     color: white;
+    font-size: 13px;
 
     &:hover {
         background: #212431;
@@ -62,7 +64,7 @@ export const NavLinkContainer = styled.div`
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
-    padding: 25px 0px;
+    padding: 0px;
     margin-left: 22px;
 `;
 
@@ -88,3 +90,15 @@ export const Em = styled.em`
 export const Small = styled.small`
     margin-left: 20px;
 `;
+
+export const CopyRight = styled.p`
+    text-align: center;
+    position: absolute;
+    bottom: 5px;
+    font-size: 12px;
+    width: calc(100% - 60px);
+`;
+
+// export const Small = styled.small`
+//     margin-left: 20px;
+// `;

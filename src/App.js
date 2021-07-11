@@ -35,10 +35,12 @@ const Toggle = styled.button`
   background: #3cb1bd;
   padding: 15px;
   color: white;
-  font-size: 20px;
+  font-size: 15px;
   border-radius: 50%;
   border: none;
   z-index: 9;
+  width: 35px;
+  height: 35px;
 
   @media(max-width: 720px) {
     display: flex;

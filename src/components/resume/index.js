@@ -1,6 +1,6 @@
 import React from 'react';
 
-import fileDownload from 'js-file-download'
+import fileDownload from 'js-file-download';
 import resumeUrl from '../../assets/resume.pdf';
 
 // import PdfViewer from '../ui/PdfViewer';

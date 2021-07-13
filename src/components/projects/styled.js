@@ -6,13 +6,13 @@ export const MainContainer = styled.section`
 
 export const ProjectCard = styled.div`
     padding: 20px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 8px 24px 0px;
     margin-bottom: 30px;
-    border-left: 2px solid #8e06e3;
+    border-left: 2px solid #1666c2;
     position: relative;
 
     @media(max-width: 720px) {
-        padding: 10px;
+        padding: 20px 10px;
     }
 `;
 
@@ -37,14 +37,14 @@ export const Counter = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: red;
+    width: 15px;
+    height: 15px;
+    background: #1666c2;
     color: white;
     position: absolute;
-    top: -11px;
-    left: 6px;
+    top: 0;
+    left: 0;
+    font-size: 10px;
 `;
 
 export const CompanyNameDiv = styled.h2`
@@ -76,4 +76,46 @@ export const EM = styled.em`
         padding: 0;
         margin-bottom: 20px;
     }
+`;
+
+
+export const CompanyDetails = styled.div`
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+    background: #222b352e;
+    margin-bottom: 20px;
+    border-radius: 15px 15px 0px 0px;
+    box-shadow: 3px 5px 8px #c1c0c0;
+
+    @media(max-width: 720px) {
+        display: block;
+    }
+`;
+
+export const Company = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: ${({ width }) => width || 'auto'};
+
+    @media(max-width: 720px) {
+        display: block;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+`;
+
+export const Header = styled.div`
+    color: #0e0101c7;
+    font-weight: 700;
+    margin-bottom: 3px;
+`;
+
+export const Value = styled.div`
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    color: #1666c2;
 `;

@@ -12,12 +12,12 @@ import {
     Items
 } from './styled';
 import { PrimaryHeading } from '../ui/Headings';
-import {aboutMe, AboutInfo} from '../../constant';
+import {aboutMe, AboutInfo, CURRENT_DESIGNATION } from '../../constant';
 
 const info = (props) => {
     return (
         <React.Fragment>
-            <AboutPrimaryHeading> UI/UX and Full Stack Developer </AboutPrimaryHeading>
+            <AboutPrimaryHeading> { `${CURRENT_DESIGNATION} & Freelancer` }  </AboutPrimaryHeading>
             <AboutContent style={{padding: '0px 20px', fontStyle: 'italic'}}>{aboutMe}</AboutContent>
             <List>
                 {

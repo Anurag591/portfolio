@@ -54,19 +54,8 @@ const StyledButton = styled.button`
         border-top-color: inherit;
         
         animation: ${downloadArrow} 2s linear infinite;
-        animation-play-state: paused;
 
         color: #4CC713;
-    }
-
-    &:hover:after {
-        animation-play-state: running;
-    }
-
-    @media(max-width: 720px) {
-        &:after {
-            animation-play-state: running;
-        }
     }
 `;
 

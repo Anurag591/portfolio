@@ -10,10 +10,12 @@ import {
     Title,
     Counter,
     Data,
-    CompanyName,
-    CompanyNameDiv,
     ResponsibilityItem,
-    EM
+    EM,
+    CompanyDetails,
+    Company,
+    Header,
+    Value
 
 } from './styled';
 
@@ -23,14 +25,9 @@ const Responsibility = ({ item }) => {
 
 
 const Project = ({ project }) => {
-    console.log(project);
     return (
         <ProjectCard>
             <Counter>{ project.index + 1 }</Counter>
-            <ProjectTitle>
-                <Title> <Data>{ project.duration }</Data> </Title>
-                <Title> <Data>{ project.place }</Data> </Title>
-            </ProjectTitle>
 
             <ProjectTitle>
                 <Title> <b> Project Title: </b> <Data>{ project.title }</Data> </Title>
@@ -58,13 +55,33 @@ const ProjectList = ( { projectDetails } ) => {
 
     return (
         <div>
-            <CompanyNameDiv>
-                <b>Company Name: </b> 
-                <CompanyName> {projectDetails.company_name} </CompanyName>
-            </CompanyNameDiv>
+
+            <CompanyDetails>
+                <Company width="40%">
+                    <Header>Company Name</Header>
+                    <Value>{projectDetails.company_name}</Value>
+                </Company>
+                <Company>
+                    <Header>From</Header>
+                    <Value>{projectDetails.timeFrame.from}</Value>
+                </Company>
+                <Company>
+                    <Header>To</Header>
+                    <Value>{projectDetails.timeFrame.to}</Value>
+                </Company>
+                <Company>
+                    <Header>Worked For</Header>
+                    <Value>{projectDetails.timeFrame.period || '--'}</Value>
+                </Company>
+                <Company>
+                    <Header>Place</Header>
+                    <Value>{projectDetails.place}</Value>
+                </Company>
+            </CompanyDetails>
+
             {
                 projectDetails.projects.map((element, index) => {
-                    return <Project key={index} project = {{ ...element, index }} />
+                    return <Project key={index} project = {{ ...element, index, color: projectDetails.color }} />
                 })
             }
         </div>
@@ -72,7 +89,7 @@ const ProjectList = ( { projectDetails } ) => {
 
 };
 
-const Projects = (props) => {
+const Projects = () => {
     return (
         <MainContainer>
             <PrimaryHeading>Projects</PrimaryHeading>

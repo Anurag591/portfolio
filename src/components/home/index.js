@@ -1,10 +1,12 @@
 import React from 'react';
 
 import { name, PROFILE } from '../../constant';
+import Video from '../../assets/video.mp4'
 
 import TypewriterComponent from 'typewriter-effect';
 
 import { 
+    BackgroundVideo,
     BackgroundDiv,
     NameSection,
     ImageSection,
@@ -31,17 +33,18 @@ const TypeWriter = () => {
 
 const Home = () => {
     return (
-        <BackgroundDiv>
-            <NameSection>
-                <Name>{name}</Name>
-                <Blinker>I'm &nbsp;
-                    {TypeWriter()}
-                </Blinker>
-            </NameSection>
+            <BackgroundDiv>
+                <BackgroundVideo muted loop autoPlay src={Video} type='video/mp4' />
+                <NameSection>
+                    <Name>{name}</Name>
+                    <Blinker>I'm &nbsp;
+                        {TypeWriter()}
+                    </Blinker>
+                </NameSection>
 
-            <ImageSection />
+                <ImageSection />
 
-        </BackgroundDiv>
+            </BackgroundDiv>
     )
 }
 

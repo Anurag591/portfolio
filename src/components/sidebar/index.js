@@ -1,7 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import fileDownload from 'js-file-download';
-import Resume from '../../assets/resume.pdf';
+
 
 import Avatar from '../../assets/avatar.jpg';
 
@@ -37,7 +36,7 @@ const Sidebar = props => {
 
     const download = () => {
         const link = window.document.createElement('a');
-        link.href =  Resume;
+        link.href = RESUME_URL;
         link.download = `${ name } | ${ CURRENT_DESIGNATION } | Resume.pdf`;
         link.target = '_blank';
         link.click();

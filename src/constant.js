@@ -57,10 +57,17 @@ export const AboutInfo = [
 export const PROJECT_LIST = [
     {
         company_name: 'Caritor Solutions India Pvt Ltd',
+        timeFrame: {
+            from: 'November 2020',
+            to: 'Current',
+            period: ''
+        },
+        place: 'Bangalore',
+        color: '#20C2F3',
         projects: [
             {
                 title: 'Akakus Oil Cost Control Application',
-                description: `Religare Health Insurance Company Limited is an Indian health insurance firm.`,
+                description: `Akakus Oil is crude oil extraction company in Libya`,
                 duration: 'November 2020 – July 2021 (9 Months)',
                 designation: 'Software Engineer',
                 place: 'Bangalore',
@@ -75,11 +82,18 @@ export const PROJECT_LIST = [
     },
     {
         company_name: 'Mantra Labs Pvt Ltd',
+        timeFrame: {
+            from: 'May 2018',
+            to: 'September 2020',
+            period: '2.4 Years'
+        },
+        place: 'Bangalore',
+        color: '#20C2F3',
         projects: [
             {
                 title: 'Religare Health Insurance',
                 description: `Religare Health Insurance Company Limited is an Indian health insurance firm.`,
-                duration: 'June 2019 – Jan 2021 (1 Years & 8 Months)',
+                duration: 'June 2019 – Jan 2021 (2 Years & 4 Months)',
                 designation: 'Software Engineer',
                 place: 'Bangalore',
                 responsibility: [
@@ -103,7 +117,6 @@ export const PROJECT_LIST = [
         ]
     }
 ];
-
 
 export const RESUME_URL = 'https://propcatalyst-dev.s3.ap-south-1.amazonaws.com/propcatalyst-assets/Abhinav%20Anand%20CV.pdf';
 

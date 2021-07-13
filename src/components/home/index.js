@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { name, PROFILE } from '../../constant';
-import Video from '../../assets/video.mp4'
+import Video from '../../assets/video_1.mp4'
 
 import TypewriterComponent from 'typewriter-effect';
 

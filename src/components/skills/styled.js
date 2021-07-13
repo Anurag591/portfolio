@@ -5,12 +5,17 @@ export const Container = styled.section`
     padding: 20px;
 `;
 
-export const Article = styled.p`
+export const Article = styled.h1`
     color: #4d4d4d;
     letter-spacing: 1px;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 15px;
     text-align: justify;
+    margin-bottom: 25px;
+`;
+
+export const SkillsPoints = styled.p`
+    margin: 5px;
 `;
 
 export const SkillContainer = styled.div`

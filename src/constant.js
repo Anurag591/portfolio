@@ -2,9 +2,19 @@ export const production = false;
 export const name = 'Anurag Singh';
 export const email ='anuragsngh462@gmail.com';
 export const CURRENT_DESIGNATION = 'Software Engineer';
-export const PROFILE = ['Developer', 'Freelancer', 'Tester'];
+export const CURRENT_COMPANY_NAME = 'Caritor solutions India Ptv Ltd';
+export const CURRENT_CITY = 'Bangalore';
+export const PROFILE = ['Developer', 'Freelancer'];
 export const MOBILE = 7001208860;
 export const WHATSAPP_NUMBER = 7001208860;
+export const TOTAL_EXPERIENCE = 3;
+export const DATE_OF_BIRTH = '31 July 1995';
+export const HIGHEST_QUALIFICATION = 'B.Tech (CS)';
+export const AGE = 25;
+export const WEBSITE_DOMAIN = 'www.wraxius-anurag.com';
+export const FREELANCING_AVAILABILITY = true;
+export const GYAN_KI_BAAT = { text: 'Save a tree', logo: 'fas fa-tree', color: '#33781d' };
+
 export const socialLinks = [
     
     { title: 'LinkedIn', link: 'https://www.linkedin.com/in/anurag-singh-a45372120/', className: 'fab fa-linkedin-in', color: '#0A66C2', newTab: true },
@@ -16,10 +26,21 @@ export const socialLinks = [
 ];
 
 export const aboutMe = `
-    Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem.
-    Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.
-    Quia fugiat sit in iste officiis commodi quidem hic quas.
+My Name is ${ name }, currently working for ${ CURRENT_COMPANY_NAME } in ${ CURRENT_CITY },
+I have more than ${ TOTAL_EXPERIENCE }+ years of experience in IT Development.
+Started as a backend developer in NodeJs (SailsJs and Express Framework) in May 2018 and also started working as both backend and frontend (React Js and Angular 6+).
+I also have knowledge of MySQL and MongoDB Databases.
+Currently I am working on a Project which is related to Cost Control Management for (Libyan Client Oil Company) which is being developed on NodeJs and React Js.
 `;
+
+export const skillsInfo = [
+    {key: '0', value: 'Professional Skills:-'},
+    {key: '1', value: '- One to One Interaction with Client'},
+    {key: '2', value: '- Worked on AWS Services (DynamoDB, Lambda Functions, CloudWatch, S3 Bucket, SNS Service, EC2)'},
+    {key: '3', value: '- Handling Projects by Self'},
+    {key: '4', value: '- Worked on JavaScript, NodeJs , React JS, Angular 6+ , MySQL , MongoDB, HTML5 , CSS3 , Bootstrap'},
+    {key: '5', value: '- Worked on Various Projects like Hospital Appointment System , INC (Indian National Congress) , Property Investment, Feedback System , Chatbot Backend using webSocket Client.'},
+];
 
 export const programmingSkills = [
     { skillName: 'html 5', rating: '80%' },
@@ -44,14 +65,14 @@ export const technicalSkills =[
 ];
 
 export const AboutInfo = [
-    {keyName: 'BirthDay', value: '31 July 1995'},
-    {keyName: 'Age', value: '25'},
-    {keyName: 'Website', value: 'www.anuragsingh.com'},
-    {keyName: 'Degree', value: 'B.Tech (CS)'},
-    {keyName: 'Phone', value: '+91 7001208860'},
-    {keyName: 'Email', value: 'anuragsngh462@gmail.com'},
-    {keyName: 'City', value: 'Bangalore'},
-    {keyName: 'Freelance', value: 'Available'},
+    { keyName: 'BirthDay', value: DATE_OF_BIRTH },
+    { keyName: 'Age', value: AGE },
+    { keyName: 'Website', value: WEBSITE_DOMAIN },
+    { keyName: 'Degree', value: HIGHEST_QUALIFICATION },
+    { keyName: 'Phone', value: `+91 ${MOBILE}`},
+    { keyName: 'Email', value: email },
+    { keyName: 'City', value: CURRENT_CITY },
+    { keyName: 'Freelance', value: FREELANCING_AVAILABILITY ? 'Available' : 'Not Available'},
 ];
 
 export const PROJECT_LIST = [
@@ -68,9 +89,7 @@ export const PROJECT_LIST = [
             {
                 title: 'Akakus Oil Cost Control Application',
                 description: `Akakus Oil is crude oil extraction company in Libya`,
-                duration: 'November 2020 – July 2021 (9 Months)',
                 designation: 'Software Engineer',
-                place: 'Bangalore',
                 responsibility: [
                     'Development of business logic using ReactJs.',
                     'State management using Redux.',
@@ -91,34 +110,43 @@ export const PROJECT_LIST = [
         color: '#20C2F3',
         projects: [
             {
-                title: 'Religare Health Insurance',
-                description: `Religare Health Insurance Company Limited is an Indian health insurance firm.`,
-                duration: 'June 2019 – Jan 2021 (2 Years & 4 Months)',
+                title: 'Real Estate (PropCatalyst - Finance Domain)',
+                description: `PropCatalyst is an online platform that provides fractional ownership
+                of pre-leased commercial properties to prospective investors.
+                Through the platform, investors have the opportunity to invest in real estate.`,
                 designation: 'Software Engineer',
-                place: 'Bangalore',
                 responsibility: [
                     'Development of business logic using ReactJs.',
                     'State management using Redux.',
-                    'Creating template using HTML, CSS and Bootstrap.'
+                    'Creating template using HTML, CSS and Bootstrap',
+                    'Development of backend structure using Sails Js and MySQL'
+                ]
+            },
+            {
+                title: 'Manipal Hospital',
+                description: `Manipal Hospital is a group of hospital in India for which an appointment system was created`,
+                designation: 'Software Engineer',
+                responsibility: [
+                    'Development of business logic using Angular 2+',
+                    'Creating template using HTML, CSS and Bootstrap.',
+                    'Development of backend structure using Sails Js and MySQL'
                 ]
             },
             {
                 title: 'Religare Health Insurance',
                 description: `Religare Health Insurance Company Limited is an Indian health insurance firm.`,
-                duration: 'June 2019 – Jan 2021 (1 Years & 8 Months)',
                 designation: 'Software Engineer',
-                place: 'Bangalore',
                 responsibility: [
-                    'Development of business logic using ReactJs.',
-                    'State management using Redux.',
-                    'Creating template using HTML, CSS and Bootstrap.'
+                    'Development of business logic using Angular 2+',
+                    'Creating template using HTML, CSS and Bootstrap.',
+                    'Development of backend structure using Sails Js and MySQL'
                 ]
             }
         ]
     }
 ];
 
-export const RESUME_URL = 'https://propcatalyst-dev.s3.ap-south-1.amazonaws.com/propcatalyst-assets/Abhinav%20Anand%20CV.pdf';
+// export const RESUME_URL = 'https://propcatalyst-dev.s3.ap-south-1.amazonaws.com/propcatalyst-assets/Abhinav%20Anand%20CV.pdf';
 
 export const API_DATA = {
     contactUsApiURL: 'http://localhost:3000/contact'

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { aboutMe, programmingSkills, technicalSkills} from '../../constant';
+import { skillsInfo, programmingSkills, technicalSkills} from '../../constant';
 
 import { PrimaryHeading, SecondaryHeading } from '../ui/Headings';
 import {
@@ -10,9 +10,17 @@ import {
     Text,
     ProgressBar,
     FillBar,
-    SkillContainer
+    SkillContainer,
+    SkillsPoints
 
 } from './styled';
+
+const skillsInformation = () => {
+    return skillsInfo.map(element => {
+        return <SkillsPoints key={element.key}>{element.key === '0' ? <b> {element.value} </b> : element.value}</SkillsPoints>
+    })
+
+}
 
 const NewSkills = ({ data }) => {
     return (
@@ -45,7 +53,7 @@ const Skills = () => {
     return (
         <Container>
             <PrimaryHeading>Skills</PrimaryHeading>
-            <Article> { aboutMe } </Article>
+            <Article> { skillsInformation() } </Article>
 
             { addSkillsRow({skill: 'Programming Skills', data: programmingSkills}) }
             { addSkillsRow({skill: 'Technical Skills', data: technicalSkills}) }

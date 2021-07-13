@@ -1,10 +1,10 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-
+import Resume from '../../assets/resume.pdf'
 import Avatar from '../../assets/avatar.jpg';
 
-import { name, socialLinks, CURRENT_DESIGNATION, RESUME_URL } from '../../constant';
+import { name, socialLinks, CURRENT_DESIGNATION } from '../../constant';
 
 import {
     SidebarContainer,
@@ -36,7 +36,7 @@ const Sidebar = props => {
 
     const download = () => {
         const link = window.document.createElement('a');
-        link.href = RESUME_URL;
+        link.href = Resume;
         link.download = `${ name } | ${ CURRENT_DESIGNATION } | Resume.pdf`;
         link.target = '_blank';
         link.click();
@@ -50,7 +50,7 @@ const Sidebar = props => {
                 
                 <SocialLinkContainer>
                     {
-                        socialLinks.map(social => <SocialLink target={social.newTab ? '_blank' : '_self'} bgColor={social.color} key={social.title} title = {social.title} href={social.link}> <em className={social.className}></em></SocialLink>)
+                        socialLinks.map(social => <SocialLink target='_parent' bgColor={social.color} key={social.title} title = {social.title} href={social.link}> <em className={social.className}></em></SocialLink>)
                     }
                 </SocialLinkContainer>
 

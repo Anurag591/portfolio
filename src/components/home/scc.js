@@ -1,5 +1,5 @@
 import styled  from "styled-components";
-import BgImage from '../../assets/bg.jpeg';
+import BgImage from '../../assets/home-bg.jpg';
 
 export const BackgroundVideo = styled.video`
     width: 100%;
@@ -8,16 +8,16 @@ export const BackgroundVideo = styled.video`
 `;
 
 export const BackgroundDiv = styled.section`
-    display: flex;
+    /* display: flex;
     align-items: center;
     background-image: url(${BgImage});
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    height: 100vh;
-    /* position: relative;
+    height: 100vh; */
+    position: relative;
     display: flex;
     justify-content: center;
-    align-items: center; */
+    align-items: center;
 `;
 export const NameSection = styled.div`
     /* margin-left: 12%;

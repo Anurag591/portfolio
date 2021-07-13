@@ -1,5 +1,6 @@
 import React from 'react';
 import Avatar from '../../assets/avatar.jpg';
+import India from '../../assets/IndianFlag.png';
 import {
     Container,
     AboutContent,
@@ -9,26 +10,33 @@ import {
     AboutPrimaryHeading,
     Icon,
     List,
-    Items
+    Items,
+    GyanKiBaat,
+    Flag
 } from './styled';
 import { PrimaryHeading } from '../ui/Headings';
-import {aboutMe, AboutInfo, CURRENT_DESIGNATION } from '../../constant';
+import {aboutMe, AboutInfo, CURRENT_DESIGNATION, GYAN_KI_BAAT } from '../../constant';
 
 const info = (props) => {
+    // console.log(aboutMe);
     return (
         <React.Fragment>
             <AboutPrimaryHeading> { `${CURRENT_DESIGNATION} & Freelancer` }  </AboutPrimaryHeading>
-            <AboutContent style={{padding: '0px 20px', fontStyle: 'italic'}}>{aboutMe}</AboutContent>
             <List>
                 {
                     AboutInfo.map(item => {
                         return (
-                            <Items key={item.keyName}> <Icon className="fas fa-chevron-right" ></Icon> <b>{item.keyName}:</b> &nbsp;&nbsp;{item.value}</Items>
+                            <Items key={item.keyName}>
+                                <Icon className="fas fa-chevron-right" ></Icon> 
+                                <b>{item.keyName}:</b> &nbsp; 
+                                {item.keyName === 'Phone' ? <Flag src = { India } /> : null}
+                                 &nbsp;{item.value} 
+                            </Items>
                         )
                     })
                 }
             </List>
-            <AboutContent style={{padding: '0px 20px', marginBottom: '0px'}}>{aboutMe}</AboutContent>
+            <GyanKiBaat color = { GYAN_KI_BAAT.color }> { GYAN_KI_BAAT.text } <em className={ GYAN_KI_BAAT.logo }></em> </GyanKiBaat>
         </React.Fragment>
     )
 }
@@ -38,7 +46,7 @@ const About = () => {
         <React.Fragment>
             <Container>
                 <PrimaryHeading>About</PrimaryHeading>
-                <AboutContent>{aboutMe} {aboutMe} {aboutMe}</AboutContent>
+                <AboutContent>{ aboutMe }</AboutContent>
                 <AboutContainer>
                     <ImageSection src={Avatar}></ImageSection>
                     <AboutInformation>

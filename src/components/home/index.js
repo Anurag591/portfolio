@@ -1,12 +1,10 @@
 import React from 'react';
 
 import { name, PROFILE } from '../../constant';
-import Video from '../../assets/video_1.mp4'
 
 import TypewriterComponent from 'typewriter-effect';
 
-import { 
-    BackgroundVideo,
+import {
     BackgroundDiv,
     NameSection,
     ImageSection,
@@ -34,7 +32,6 @@ const TypeWriter = () => {
 const Home = () => {
     return (
             <BackgroundDiv>
-                <BackgroundVideo muted loop autoPlay src={Video} type='video/mp4' />
                 <NameSection>
                     <Name>{name}</Name>
                     <Blinker>I'm &nbsp;

@@ -11,11 +11,11 @@ import {
     Icon,
     List,
     Items,
-    GyanKiBaat,
     Flag
 } from './styled';
 import { PrimaryHeading } from '../ui/Headings';
-import {aboutMe, AboutInfo, CURRENT_DESIGNATION, GYAN_KI_BAAT } from '../../constant';
+import GyanKiBaat from '../ui/GyanKiBaat';
+import {aboutMe, AboutInfo, CURRENT_DESIGNATION } from '../../constant';
 
 const info = (props) => {
     // console.log(aboutMe);
@@ -36,7 +36,7 @@ const info = (props) => {
                     })
                 }
             </List>
-            <GyanKiBaat color = { GYAN_KI_BAAT.color }> { GYAN_KI_BAAT.text } <em className={ GYAN_KI_BAAT.logo }></em> </GyanKiBaat>
+            <GyanKiBaat />
         </React.Fragment>
     )
 }

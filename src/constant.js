@@ -33,13 +33,12 @@ I also have knowledge of MySQL and MongoDB Databases.
 Currently I am working on a Project which is related to Cost Control Management for (Libyan Client Oil Company) which is being developed on NodeJs and React Js.
 `;
 
-export const skillsInfo = [
-    {key: '0', value: 'Professional Skills:-'},
-    {key: '1', value: '- One to One Interaction with Client'},
-    {key: '2', value: '- Worked on AWS Services (DynamoDB, Lambda Functions, CloudWatch, S3 Bucket, SNS Service, EC2)'},
-    {key: '3', value: '- Handling Projects by Self'},
-    {key: '4', value: '- Worked on JavaScript, NodeJs , React JS, Angular 6+ , MySQL , MongoDB, HTML5 , CSS3 , Bootstrap'},
-    {key: '5', value: '- Worked on Various Projects like Hospital Appointment System , INC (Indian National Congress) , Property Investment, Feedback System , Chatbot Backend using webSocket Client.'},
+export const professionalSkills = [
+    'One to One Interaction with Client',
+    'Worked on AWS Services (DynamoDB, Lambda Functions, CloudWatch, S3 Bucket, SNS Service, EC2)',
+    'Handling Projects by Self',
+    'Worked on JavaScript, NodeJs , React JS, Angular 6+ , MySQL , MongoDB, HTML5 , CSS3 , Bootstrap',
+    'Worked on Various Projects like Hospital Appointment System , INC (Indian National Congress) , Property Investment, Feedback System , Chatbot Backend using webSocket Client.',
 ];
 
 export const programmingSkills = [

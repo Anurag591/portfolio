@@ -77,17 +77,7 @@ export const Items = styled.div`
     }
 `;
 
-export const GyanKiBaat = styled.p`
-    color: ${({ color }) => color };
-    text-align: center;
-    font-size: 20px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    font-family: cursive;
 
-    @media(max-width: 720px) {
-    }
-`;
 
 export const Flag = styled.img`
     width: 20px;

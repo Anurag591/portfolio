@@ -1,18 +1,19 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { Route } from 'react-router-dom';
-import Home from './components/home';
-import About from './components/about';
-import Skills from './components/skills';
-import Projects from './components/projects';
+
+const Home = lazy(() => import('./components/home'));
+const About = lazy(() => import('./components/about'));
+const Skills = lazy(() => import('./components/skills'));
+const Projects = lazy(() => import('./components/projects'));
 
 function Routing() {
     return (
-        <React.Fragment>
-          <Route path='/' exact component={Home} ></Route>
-          <Route path='/about' component={About} ></Route>
-          <Route path='/projects' component={Projects} ></Route>
-          <Route path='/skills' component={Skills} ></Route>
-        </React.Fragment>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Route path='/' exact component={Home} ></Route>
+        <Route path='/about' component={About} ></Route>
+        <Route path='/projects' component={Projects} ></Route>
+        <Route path='/skills' component={Skills} ></Route>
+      </Suspense>
     )
 }
 

@@ -19,6 +19,9 @@ import {
 
 } from './styled';
 
+import GyanKiBaat from '../ui/GyanKiBaat';
+
+
 const Responsibility = ({ item }) => {
     return <div style={{display: 'flex', marginBottom: '4px'}}><EM className = "fab fa-accusoft" /> <small>{ item }</small> </div>
 };
@@ -101,6 +104,9 @@ const Projects = () => {
                     })
                 }
             </div>
+            <GyanKiBaat />
+            
+            
         </MainContainer>
     );
 }

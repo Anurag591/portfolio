@@ -1,11 +1,10 @@
 import React from 'react';
 
-import { skillsInfo, programmingSkills, technicalSkills} from '../../constant';
+import { professionalSkills, programmingSkills, technicalSkills} from '../../constant';
 
 import { PrimaryHeading, SecondaryHeading } from '../ui/Headings';
 import {
     Container,
-    Article,
     NewSkillsContainer,
     Text,
     ProgressBar,
@@ -14,11 +13,20 @@ import {
     SkillsPoints
 
 } from './styled';
+import GyanKiBaat from '../ui/GyanKiBaat';
 
-const skillsInformation = () => {
-    return skillsInfo.map(element => {
-        return <SkillsPoints key={element.key}>{element.key === '0' ? <b> {element.value} </b> : element.value}</SkillsPoints>
-    })
+
+const ProfessionalSkill = () => {
+    return(
+        <React.Fragment>
+            <SecondaryHeading>Professional Skills</SecondaryHeading>
+            {
+                professionalSkills.map((element, index) => {
+                    return <SkillsPoints key = { index }> <em style={{paddingRight: '10px'}} className="fab fa-accusoft"></em> { element } </SkillsPoints>
+                })
+            }
+        </React.Fragment>
+    );
 
 }
 
@@ -34,7 +42,7 @@ const NewSkills = ({ data }) => {
     );
 };
 
-const addSkillsRow = props => {
+const AddSkillsRow = props => {
     return(
         <React.Fragment>
             <SecondaryHeading>{props.skill}</SecondaryHeading>
@@ -53,10 +61,15 @@ const Skills = () => {
     return (
         <Container>
             <PrimaryHeading>Skills</PrimaryHeading>
-            <Article> { skillsInformation() } </Article>
+            
+            { professionalSkills.length ? <ProfessionalSkill /> : null }
 
-            { addSkillsRow({skill: 'Programming Skills', data: programmingSkills}) }
-            { addSkillsRow({skill: 'Technical Skills', data: technicalSkills}) }
+            <AddSkillsRow skill = 'Programming Skills' data = { programmingSkills }  />
+            <AddSkillsRow skill = 'Technical Skills' data = { technicalSkills }  />
+
+
+
+            <GyanKiBaat />
 
         </Container>
     );
